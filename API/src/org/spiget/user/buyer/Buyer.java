@@ -19,7 +19,7 @@ public interface Buyer extends User {
     /**
      * Returns the price of the plugin that this user has bought it for.
      * <p>
-     * If this user was added by the author himself, this will return null.
+     * If this user was added by the author himself, this will return -1.
      *
      * @return the price
      */
