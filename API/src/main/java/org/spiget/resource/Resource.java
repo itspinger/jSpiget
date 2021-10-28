@@ -1,5 +1,6 @@
 package org.spiget.resource;
 
+
 import org.spiget.user.User;
 
 import java.util.List;
@@ -58,10 +59,19 @@ public interface Resource {
     User getAuthor();
 
     /**
+     * Returns a list of users that contributed to making of this resource.
+     * It will return empty, if no users were provided in the first place.
+     *
+     * @return the list of contributors
+     */
+
+    List<String> getContributors();
+
+    /**
      * Returns the total amount of times this resource has been downloaded.
      * <p>
-     * If this resource is a premium resource, this method should be equal
-     * to the amount of buyers.
+     * If this resource is a premium resource, this method might not be equal
+     * to the amount of buyers, depending on if the user downloaded the resource.
      *
      * @return the amount of downloads
      */
