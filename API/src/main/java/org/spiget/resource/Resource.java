@@ -68,6 +68,33 @@ public interface Resource {
     List<String> getContributors();
 
     /**
+     * Returns users retrieved from the contributors names.
+     * <p>
+     * If the contributor names are not updated to the spigot names,
+     * this might return empty.
+     *
+     * @return the contributors as users
+     */
+
+    List<User> getContributorsAsUsers();
+
+    /**
+     * Returns the average rating among all of {@link #getReviews()}.
+     *
+     * @return the average rating
+     */
+
+    double getAverageRating();
+
+    /**
+     * Returns a list of all reviews on this resource.
+     *
+     * @return the reviews
+     */
+
+    List<ResourceReview> getReviews();
+
+    /**
      * Returns the total amount of times this resource has been downloaded.
      * <p>
      * If this resource is a premium resource, this method might not be equal
